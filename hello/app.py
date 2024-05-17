@@ -48,6 +48,7 @@ def get_answer(question: str):
         answer = f"{completion.choices[0].message.content}\nReference:\n{reference}" # Not yet completing reference part 
         return answer
         
+<<<<<<< HEAD
 # @app.route('/call-chatbot', methods=['POST'])
 # def handle_request():
 #     try: 
@@ -63,13 +64,20 @@ def get_answer(question: str):
 #         logging.error(f"An error occurred: {e}")
 #         return jsonify({"error": "An error occurred"}), 500 
 @app.route('/', methods=['GET'])
+=======
+@app.route('/call-chatbot', methods=['POST'])
+>>>>>>> e11c7f2 (change endpoint)
 def handle_request():
     try: 
         # Extract data from request
         data = request.json
         
         # Call your codelab code with the data
+<<<<<<< HEAD
         response_data = "hello world 111"
+=======
+        response_data = your_codelab_function(data)
+>>>>>>> e11c7f2 (change endpoint)
         
         # Return the response in JSON format
         return jsonify(response_data)
@@ -77,7 +85,10 @@ def handle_request():
         logging.error(f"An error occurred: {e}")
         return jsonify({"error": "An error occurred"}), 500 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> e11c7f2 (change endpoint)
 def your_codelab_function(data):
     # Here you will process the data
     # and return the response
